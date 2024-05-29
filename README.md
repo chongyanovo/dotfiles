@@ -89,3 +89,15 @@ brew install picgo --cask
 sudo xattr -d com.apple.quarantine "/Applications/PicGo.app"
 ```
 
+## `Bat`配置
+
+- 下载(使用`brew`)
+
+```bash
+brew install bat 
+```
+
+- 配置使用
+```bash
+stow bat
+```
