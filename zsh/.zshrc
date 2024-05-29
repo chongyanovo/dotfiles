@@ -91,6 +91,7 @@ eval "$(zoxide init zsh --cmd z)"
 eval "$(zoxide init zsh --cmd cd)"
 
 # Alias for cat replacement: bat
+export BAT_THEME="Catppuccin Frappe"
 export BAT_CONFIG_PATH="${XDG_CONFIG_HOME:-~/.config}/bat.conf"
 alias cat="bat"
 

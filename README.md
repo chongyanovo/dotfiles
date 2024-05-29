@@ -89,7 +89,9 @@ brew install picgo --cask
 sudo xattr -d com.apple.quarantine "/Applications/PicGo.app"
 ```
 
-## `Bat`配置
+## `bat`配置 
+
+`bat`GitHub链接🔗: [bat](https://github.com/sharkdp/bat)
 
 - 下载(使用`brew`)
 
@@ -100,4 +102,12 @@ brew install bat
 - 配置使用
 ```bash
 stow bat
+```
+
+- 使用方法
+> 清除缓存文件
+> 缓存文件
+```bash
+bat cache --clear
+bat cache --build
 ```
