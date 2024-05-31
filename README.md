@@ -6,7 +6,7 @@ git clone https://github.com/ChongYanOvO/dotfiles ~/dotfiles
 
 ## 使用`stow`来管理配置文件
 
-`stow`GitHub链接🔗: [stow](https://github.com/aspiers/stow)
+`stow`GitHub 链接 🔗: [stow](https://github.com/aspiers/stow)
 
 - 下载(使用`brew`)
 
@@ -23,7 +23,7 @@ stow zsh
 
 ## `wezterm`配置
 
-`wezterm`官网🔗: [wezterm](https://wezfurlong.org/wezterm/)
+`wezterm`官网 🔗: [wezterm](https://wezfurlong.org/wezterm/)
 
 - 下载(使用`brew`)
 
@@ -40,7 +40,7 @@ stow wezterm
 
 ## `NeoVim`配置
 
-`NeoVim`官网🔗: [NeoVim](https://neovim.io/)
+`NeoVim`官网 🔗: [NeoVim](https://neovim.io/)
 
 - 下载(使用`brew`)
 
@@ -76,11 +76,9 @@ brew install eza dust duf gtop bat jq
 
 - jq
 
-
-
 ## `PicGo`配置
 
-`PicGo`GitHub链接🔗: [PicGo](https://github.com/Molunerfinn/PicGo)
+`PicGo`GitHub 链接 🔗: [PicGo](https://github.com/Molunerfinn/PicGo)
 
 - 下载(使用`brew`)
 
@@ -89,25 +87,43 @@ brew install picgo --cask
 sudo xattr -d com.apple.quarantine "/Applications/PicGo.app"
 ```
 
-## `bat`配置 
+## `bat`配置
 
-`bat`GitHub链接🔗: [bat](https://github.com/sharkdp/bat)
+`bat`GitHub 链接 🔗: [bat](https://github.com/sharkdp/bat)
 
 - 下载(使用`brew`)
 
 ```bash
-brew install bat 
+brew install bat
 ```
 
 - 配置使用
+
 ```bash
 stow bat
 ```
 
 - 使用方法
-> 清除缓存文件
-> 缓存文件
+  > 清除缓存文件
+  > 缓存文件
+
 ```bash
 bat cache --clear
 bat cache --build
+```
+
+## `fastfetch`配置
+
+`fastfetch`GitHub 链接 🔗: [fastfetch](https://github.com/Lin-Buo-Ren/fastfetch)
+
+- 下载(使用`brew`)
+
+```bash
+brew install fastfetch
+```
+
+- 配置使用
+
+```bash
+stow fastfetch
 ```
