@@ -101,8 +101,8 @@ alias du="dust"
 # Alias for df replacement: duf
 alias df="duf"
 
-# Alias for top replacement: gtop
-alias top="gtop"
+# Alias for top replacement: btm
+alias top="btm"
 
 # =========================================
 # ================ Config  ================
@@ -1054,3 +1054,7 @@ function ph(){
 function datax() {
   python $DATAX_HOME/bin/datax.py $@
 }
+
+# Init
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+# fastfetch 
