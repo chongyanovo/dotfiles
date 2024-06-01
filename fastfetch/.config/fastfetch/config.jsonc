@@ -46,7 +46,7 @@
     {
       "type": "uptime",
       "key": "\u001b[31m│    Uptime   ",
-      "format": "\u001b[34m{1} days {2} hours {3} mins       \u001b[31m│"
+      "format": "\u001b[34m{1} days {2} hours {3} mins        \u001b[31m│"
     },
     {
       "type": "custom",
