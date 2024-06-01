@@ -1,14 +1,12 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "type": "iterm",
-    "source": "~/.config/fastfetch/avtor.jpg",
-    "width": 42,
-    "height": 21,
+    "type": "file",
+    "source": "~/.config/fastfetch/logo",
     "padding": {
-      "top": 1,
-      "left": 1,
-      "right": 1
+      "top": 3,
+      "left": 3,
+      "right": 3
     }
   },
   "display": {
@@ -28,99 +26,99 @@
     },
     {
       "type": "custom",
-      "format": "\u001b[31m┌───────────────────── OS ────────────────────┐"
+      "format": "\u001b[31m╭───────────────────── OS ────────────────────╮"
     },
     {
       "type": "os",
-      "key": "\u001b[31m    OS   ",
-      "format": "\u001b[34m{2} {10} {12}"
+      "key": "\u001b[31m│    OS   ",
+      "format": "\u001b[34m{2} {10} {12}                \u001b[31m│"
     },
     {
       "type": "host",
-      "key": "\u001b[31m    Host   ",
-      "format": "\u001b[34m{2} {3}"
+      "key": "\u001b[31m│    Host   ",
+      "format": "\u001b[34m{2} {3}         \u001b[31m│"
     },
     {
       "type": "kernel",
-      "key": "\u001b[31m    Kernel   ",
-      "format": "\u001b[34m{1} {2}"
+      "key": "\u001b[31m│    Kernel   ",
+      "format": "\u001b[34m{1} {2}                 \u001b[31m│"
     },
     {
       "type": "uptime",
-      "key": "\u001b[31m    Uptime   ",
-      "format": "\u001b[34m{1} days {2} hours {3} mins"
+      "key": "\u001b[31m│    Uptime   ",
+      "format": "\u001b[34m{1} days {2} hours {3} mins       \u001b[31m│"
     },
     {
       "type": "custom",
-      "format": "\u001b[31m└─────────────────────────────────────────────┘"
+      "format": "\u001b[31m╰─────────────────────────────────────────────╯"
     },
     {
       "type": "custom",
-      "format": "\u001b[36m┌────────────────── Hardware ─────────────────┐"
+      "format": "\u001b[36m╭────────────────── Hardware ─────────────────╮"
     },
     {
       "type": "cpu",
-      "key": "\u001b[36m    CPU   ",
-      "format": "\u001b[34m{1} ({5}) @ {7} GHz ({8})",
+      "key": "\u001b[36m│    CPU   ",
+      "format": "\u001b[34m{1} ({5})@{7} GHz ({8})  \u001b[36m│",
       "temp": true
     },
     {
       "type": "gpu",
-      "key": "\u001b[36m    GPU   ",
-      "format": "\u001b[34m{2} ({5}) ({4})",
+      "key": "\u001b[36m│    GPU   ",
+      "format": "\u001b[34m{2} ({5}) ({4})          \u001b[36m│",
       "temp": true
     },
     {
       "type": "memory",
-      "key": "\u001b[36m    Memory   ",
-      "format": "\u001b[34m{1} / {2} ({3})"
+      "key": "\u001b[36m│    Memory   ",
+      "format": "\u001b[34m{1} / {2} ({3})         \u001b[36m│"
     },
     {
       "type": "disk",
-      "key": "\u001b[36m    Disk   ",
-      "format": "\u001b[34m{1} / {2} ({3})"
+      "key": "\u001b[36m│    Disk   ",
+      "format": "\u001b[34m{1} / {2} ({3})        \u001b[36m│"
     },
     {
       "type": "battery",
-      "key": "\u001b[36m    Battery   ",
-      "format": "\u001b[34m当前电量: {4} | \u001b[34m循环次数: \u001b[33m{7}"
+      "key": "\u001b[36m│    Battery   ",
+      "format": "\u001b[34m当前电量: {4}|\u001b[34m循环次数: \u001b[33m{7}  \u001b[36m│"
     },
     {
       "type": "wifi",
-      "key": "\u001b[36m    WiFi   ",
-      "format": "\u001b[34m{4} "
+      "key": "\u001b[36m│    WiFi   ",
+      "format": "\u001b[34m{4}                             \u001b[36m│"
     },
     {
       "type": "display",
-      "key": "\u001b[36m    Display   ",
-      "format": "\u001b[34m{1}x{2} @ {3}Hz (as {4}x{5})"
+      "key": "\u001b[36m│    Display   ",
+      "format": "\u001b[34m{1}x{2}@{3}Hz(as{4}x{5})  \u001b[36m│"
     },
     {
       "type": "custom",
-      "format": "\u001b[36m└─────────────────────────────────────────────┘"
+      "format": "\u001b[36m╰─────────────────────────────────────────────╯"
     },
     {
       "type": "custom",
-      "format": "\u001b[33m┌────────────────── Software ─────────────────┐"
+      "format": "\u001b[33m╭────────────────── Software ─────────────────╮"
     },
     {
       "type": "shell",
-      "key": "\u001b[33m    Shell   ",
-      "format": "\u001b[34m{3}"
+      "key": "\u001b[33m│    Shell   ",
+      "format": "\u001b[34m{3}                            \u001b[33m│"
     },
     {
       "type": "terminal",
-      "key": "\u001b[33m    Terminal   ",
-      "format": "\u001b[34m{5}"
+      "key": "\u001b[33m│    Terminal   ",
+      "format": "\u001b[34m{5}                     \u001b[33m│"
     },
     {
       "type": "terminalfont",
-      "key": "\u001b[33m    Font   ",
-      "format": "\u001b[34m{1}"
+      "key": "\u001b[33m│    Font   ",
+      "format": "\u001b[34m{1}         \u001b[33m│"
     },
     {
       "type": "custom",
-      "format": "\u001b[33m└─────────────────────────────────────────────┘"
+      "format": "\u001b[33m╰─────────────────────────────────────────────╯"
     },
     {
       "type": "colors",

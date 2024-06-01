@@ -20,6 +20,7 @@ plugins=(
    tmux
    zsh-syntax-highlighting
    zsh-autosuggestions
+   colored-man-pages
    aliases
    docker
    docker-compose

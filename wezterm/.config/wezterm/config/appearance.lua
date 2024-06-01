@@ -10,7 +10,7 @@ return {
     webgpu_preferred_adapter = gpu_adapters:pick(),
 
     -- 背景透明度
-    window_background_opacity = 0.9,
+    window_background_opacity = 0.8,
 
     -- 光标
     cursor_blink_ease_in = "EaseIn",
