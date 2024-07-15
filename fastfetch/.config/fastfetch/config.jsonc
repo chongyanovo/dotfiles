@@ -4,13 +4,14 @@
     "type": "file",
     "source": "~/.config/fastfetch/logo",
     "padding": {
-      "top": 3,
-      "left": 3,
-      "right": 3
+      "top": 1,
+      "left": 2,
+      "right": 2
     }
   },
   "display": {
     "separator": "",
+    "keyWidth": 15,
     "size": {
       "maxPrefix": "GB",
       "ndigits": 0
@@ -22,108 +23,99 @@
   },
   "modules": [
     {
-      "type": "break"
+      "key": " ",
+      "type": "custom"
     },
     {
-      "type": "custom",
-      "format": "\u001b[31m╭───────────────────── OS ────────────────────╮"
+      "key": "╭───────────╮",
+      "type": "custom"
     },
     {
       "type": "os",
-      "key": "\u001b[31m│    OS   ",
-      "format": "\u001b[34m{2} {10} {12}                \u001b[31m│"
+      "key": "│           │\u001b[11D{#31}  \u001b[{#37}OS",
+      "format": "{2} {10} {12}",
+      "outputColor": "31;1"
     },
     {
       "type": "host",
-      "key": "\u001b[31m│    Host   ",
-      "format": "\u001b[34m{2} {3}         \u001b[31m│"
+      "key": "│           │\u001b[11D{#32}󰇅  \u001b[{#37}Host",
+      "format": "{2} {3}",
+      "outputColor": "32;1"
     },
     {
-      "type": "kernel",
-      "key": "\u001b[31m│    Kernel   ",
-      "format": "\u001b[34m{1} {2}                 \u001b[31m│"
+      "type": "os",
+      "key": "│           │\u001b[11D{#34}  \u001b[{#37}Kernel",
+      "outputColor": "34;1"
     },
     {
       "type": "uptime",
-      "key": "\u001b[31m│    Uptime   ",
-      "format": "\u001b[34m{1} days {2} hours {3} mins        \u001b[31m│"
-    },
-    {
-      "type": "custom",
-      "format": "\u001b[31m╰─────────────────────────────────────────────╯"
-    },
-    {
-      "type": "custom",
-      "format": "\u001b[36m╭────────────────── Hardware ─────────────────╮"
+      "key": "│           │\u001b[11D{#35}󰅐  \u001b[{#37}Uptime",
+      "format": "{1} days {2} hours {3} mins",
+      "outputColor": "35;1"
     },
     {
       "type": "cpu",
-      "key": "\u001b[36m│    CPU   ",
-      "format": "\u001b[34m{1} ({5})@{7} GHz ({8})  \u001b[36m│",
-      "temp": true
+      "key": "│           │\u001b[11D{#36}  \u001b[{#37}CPU",
+      "format": "{1} ({5})@{7} GHz ({8})",
+      "temp": true,
+      "outputColor": "36;1"
     },
     {
       "type": "gpu",
-      "key": "\u001b[36m│    GPU   ",
-      "format": "\u001b[34m{2} ({5}) ({4})          \u001b[36m│",
-      "temp": true
+      "key": "│           │\u001b[11D{#31}  \u001b[{#37}GPU",
+      "format": "{2} ({5}) ({4})",
+      "temp": true,
+      "outputColor": "31;1"
     },
     {
       "type": "memory",
-      "key": "\u001b[36m│    Memory   ",
-      "format": "\u001b[34m{1} / {2} ({3})         \u001b[36m│"
+      "key": "│           │\u001b[11D{#32}  \u001b[{#37}Memory",
+      "format": "{1} / {2} ({3})",
+      "outputColor": "32;1"
     },
     {
       "type": "disk",
-      "key": "\u001b[36m│    Disk   ",
-      "format": "\u001b[34m{1} / {2} ({3})        \u001b[36m│"
+      "key": "│           │\u001b[11D{#33}  \u001b[{#37}Disk",
+      "format": "{1} / {2} ({3})",
+      "outputColor": "34;1"
+    },
+    {
+      "key": "│           │\u001b[11D{#34}󰏗  \u001b[{#37}Pkgs",
+      "type": "packages",
+      "outputColor": "34;1"
     },
     {
       "type": "battery",
-      "key": "\u001b[36m│    Battery   ",
-      "format": "\u001b[34m当前电量: {4}|\u001b[34m循环次数: \u001b[33m{7}  \u001b[36m│"
+      "key": "│           │\u001b[11D{#35}  \u001b[{#37}Battery",
+      "format": "当前电量: {4} 循环次数: {7}",
+      "outputColor": "35;1"
     },
     {
       "type": "wifi",
-      "key": "\u001b[36m│    WiFi   ",
-      "format": "\u001b[34m{4}                             \u001b[36m│"
-    },
-    {
-      "type": "display",
-      "key": "\u001b[36m│    Display   ",
-      "format": "\u001b[34m{1}x{2}@{3}Hz(as{4}x{5})  \u001b[36m│"
-    },
-    {
-      "type": "custom",
-      "format": "\u001b[36m╰─────────────────────────────────────────────╯"
-    },
-    {
-      "type": "custom",
-      "format": "\u001b[33m╭────────────────── Software ─────────────────╮"
+      "key": "│           │\u001b[11D{#36}  \u001b[{#37}WiFi",
+      "format": "{4}",
+      "outputColor": "36;1"
     },
     {
       "type": "shell",
-      "key": "\u001b[33m│    Shell   ",
-      "format": "\u001b[34m{3}                            \u001b[33m│"
-    },
-    {
-      "type": "terminal",
-      "key": "\u001b[33m│    Terminal   ",
-      "format": "\u001b[34m{5}                     \u001b[33m│"
+      "key": "│           │\u001b[11D{#31}  \u001b[{#37}Shell",
+      "format": "{3}",
+      "outputColor": "31;1"
     },
     {
       "type": "terminalfont",
-      "key": "\u001b[33m│    Font   ",
-      "format": "\u001b[34m{1}         \u001b[33m│"
+      "key": "│           │\u001b[11D{#32}  \u001b[{#37}Font",
+      "format": "{1}",
+      "outputColor": "32;1"
     },
     {
-      "type": "custom",
-      "format": "\u001b[33m╰─────────────────────────────────────────────╯"
-    },
-    {
+      "key": "│           │\u001b[11D{#39}  colors",
       "type": "colors",
-      "paddingLeft": 16,
       "symbol": "circle"
+    },
+    {
+      "key": "╰───────────╯",
+      "type": "custom"
     }
   ]
 }

@@ -9,6 +9,8 @@ return {
     webgpu_power_preference = 'HighPerformance',
     webgpu_preferred_adapter = gpu_adapters:pick(),
 
+    -- 设置背景图片
+    window_background_image = '~/.config/wezterm/asset/background.png',
     -- 背景透明度
     window_background_opacity = 0.8,
 

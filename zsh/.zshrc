@@ -147,12 +147,20 @@ export ES_CLUSTER_3_HOME=$ES_HOME/elasticsearch-cluster-3
 export KIBANA_HOME=$HOME/env/kibana
 export PATH=$PATH:$KIBANA_HOME/bin
 
+# goenv Environment Variable
+export GOENV_ROOT=$HOME/.goenv
+export PATH=$PATH:$GOENV_ROOT/bin
+eval "$(goenv init -)"
+
 # Go Environment Variable
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
-export GOPATH=$HOME//workspace/go
-go env -w GO111MODULE=on
-go env -w GOPROXY=https://goproxy.cn
+export GOPATH=$HOME/env/go
+export PATH=PATH=$PATH:$GOPATH/bin
+
+export PATH="$GOROOT/bin:$PATH"
+
+
+# go env -w GO111MODULE=on
+# go env -w GOPROXY=https://goproxy.cn
 
 # pyenv Environment Variable
 export PYENV_ROOT=$HOME/env/pyenv
@@ -205,10 +213,10 @@ export HIVE_CONF=$HIVE_HOME/conf
 export HIVE_LIB=$HIVE_HOME/lib
 
 # Zookeeper Environment Variable
-export ZOOKEEPER_HOME=$HOME/env/zookeeper
-export ZOOKEEPER_1_HOME=$ZOOKEEPER_HOME/zookeeper-1
-export ZOOKEEPER_2_HOME=$ZOOKEEPER_HOME/zookeeper-2
-export ZOOKEEPER_3_HOME=$ZOOKEEPER_HOME/zookeeper-3
+export CANAL_HOME=$HOME/env/zookeeper
+export ZOOKEEPER_1_HOME=$CANAL_HOME/zookeeper-1
+export ZOOKEEPER_2_HOME=$CANAL_HOME/zookeeper-2
+export ZOOKEEPER_3_HOME=$CANAL_HOME/zookeeper-3
 
 # Kafka Environment Variable
 export KAFKA_HOME=$HOME/env/kafka
@@ -242,11 +250,22 @@ export PATH=$PATH:$SQOOP_HOME/bin
 export DATAX_HOME=$HOME/env/datax
 export PATH=$PATH:$DATAX_HOME/bin
 
+# Canal Environment Variable
+export CANAL_HOME=$HOME/env/canal
+
+# Canal Admin Environment Variable
+export CANAL_ADMIN_HOME=$HOME/env/canal-admin
+
 # MySQL Environment Variable
 export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/mysql@8.0/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/mysql@8.0/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql@8.0/lib/pkgconfig"
+
+# PostgreSQL Environment Variable
+export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@13/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/postgresql@13/include"
 
 
 # ===========================
@@ -652,7 +671,34 @@ function my() {
       echo -e "-----------------------------------"
       ;;
     *)
-      echo "Usage: mysql start|stop|restart|status"
+      echo "Usage: MySQL start|stop|restart|status"
+      ;;
+  esac
+}
+
+# Function for PostgreSQL
+function pg() {
+  case $1 in
+    "start")
+      echo -e " PostgreSQL 服务启动中,请等待!"
+      brew services start postgresql@13
+      ;;
+    "stop")
+      echo -e " PostgreSQL 服务停止中,请等待!"
+      brew services stop postgresql@13
+      ;;
+    "restart")
+      echo -e " PostgreSQL 服务重启中,请等待!"
+      brew services restart postgresql@13
+      ;;
+    "status")
+      echo -e "---------------MySQL---------------"
+      echo -e " PostgreSQL 服务状态如下:"
+      brew services info postgresql@13
+      echo -e "-----------------------------------"
+      ;;
+    *)
+      echo "Usage: PostgreSQL start|stop|restart|status"
       ;;
   esac
 }
@@ -1056,6 +1102,96 @@ function datax() {
   python $DATAX_HOME/bin/datax.py $@
 }
 
+# Function for Canal
+function canal() {
+  case $1 in
+    "start")
+      canal_start
+      ;;
+    "stop")
+      canal_stop
+      ;;
+    "restart")
+      canal_restart
+      ;;
+    "status")
+      canal_status
+      ;;
+    *)
+      echo "Usage: canal start|stop|restart|status"
+      ;;
+  esac
+}
+
+function canal_start(){
+  echo -e " Canal 服务启动中,请等待!"
+  $CANAL_HOME/bin/startup.sh
+}
+
+function canal_stop(){
+  echo -e " Canal 服务停止中,请等待!"
+  $CANAL_HOME/bin/stop.sh
+}
+
+function canal_restart(){
+  echo -e " Canal 服务重启中,请等待!"
+  canal_stop
+  sleep 2
+  canal_start
+}
+
+function canal_status(){
+  echo -e "---------------Canal---------------"
+  echo -e " Canal 服务状态如下:"
+  jps -ml | grep CanalLauncher > /dev/null && echo -e " Canal 服务运行正常" || echo -e " Canal 服务运行异常"
+  echo -e "----------------------------------"
+}
+
+# Function for Canal Admin
+function canal_admin() {
+  case $1 in
+    "start")
+      canal_admin_start
+      ;;
+    "stop")
+      canal_admin_stop
+      ;;
+    "restart")
+      canal_admin_restart
+      ;;
+    "status")
+      canal_admin_status
+      ;;
+    *)
+      echo "Usage: canal_admin start|stop|restart|status"
+     ;;
+    esac
+ }
+
+function canal_admin_start(){
+  echo -e " Canal Admin 服务启动中,请等待!"
+  $CANAL_ADMIN_HOME/bin/startup.sh
+}
+
+function canal_admin_stop(){
+  echo -e " Canal Admin 服务停止中,请等待!"
+  $CANAL_ADMIN_HOME/bin/stop.sh
+}
+
+function canal_admin_restart(){
+  echo -e " Canal Admin 服务重启中,请等待!"
+  canaladmin_stop
+  sleep 2
+  canaladmin_start
+}
+
+function canal_admin_status(){
+  echo -e "---------------Canal Admin---------------"
+  echo -e " Canal Admin 服务状态如下:"
+  jps -ml | grep CanalAdminWeb > /dev/null && echo -e " Canal Admin 服务运行正常" || echo -e " Canal Admin 服务运行异常"
+  echo -e "----------------------------------"
+}
+
 # Init
-# typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 # fastfetch 
