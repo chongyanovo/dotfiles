@@ -5,15 +5,13 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
 # Theme
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Plugins
 plugins=(
   git
   web-search
   jsontools
-  zsh-syntax-highlighting
-  zsh-autosuggestions
   extract
   colored-man-pages
   aliases
@@ -24,13 +22,16 @@ plugins=(
   vscode
   zoxide
   sudo
-  wakatime
   buf
   golang
+  tmux
 )
 
+# oh-my-zsh
 source ~/.oh-my-zsh/oh-my-zsh.sh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # User configuration
 
@@ -53,6 +54,9 @@ fi
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
+
+# Alias for tmux
+alias update_tmux="tmux source ~/.config/tmux/tmux.conf"
 
 # Alias for extract
 alias x="extract"
