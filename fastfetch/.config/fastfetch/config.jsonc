@@ -11,7 +11,9 @@
   },
   "display": {
     "separator": "",
-    "keyWidth": 15,
+    "key":{
+      "width":16
+    },
     "size": {
       "maxPrefix": "GB",
       "ndigits": 0
@@ -104,12 +106,12 @@
     },
     {
       "type": "terminalfont",
-      "key": "│           │\u001b[11D{#32}  \u001b[{#37}Font",
+      "key": "│           │\u001b[11D{#32}  \u001b[{#37}Font",
       "format": "{1}",
       "outputColor": "32;1"
     },
     {
-      "key": "│           │\u001b[11D{#39}  colors",
+      "key": "│           │\u001b[11D{#39}  colors",
       "type": "colors",
       "symbol": "circle"
     },
