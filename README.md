@@ -127,3 +127,19 @@ brew install fastfetch
 ```bash
 stow fastfetch
 ```
+
+## `tmux`配置
+
+`fastfetch`GitHub 链接 🔗: [fastfetch](https://github.com/Lin-Buo-Ren/fastfetch)
+
+- 下载(使用`tmux`)
+
+```bash
+brew install tmux
+```
+
+- 配置使用
+
+```bash
+stow tmux
+```

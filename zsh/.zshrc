@@ -9,6 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Plugins
 plugins=(
+tmux
   git
   web-search
   jsontools
@@ -24,7 +25,6 @@ plugins=(
   sudo
   buf
   golang
-  tmux
 )
 
 # oh-my-zsh
@@ -56,7 +56,7 @@ alias vi="nvim"
 alias vim="nvim"
 
 # Alias for tmux
-alias update_tmux="tmux source ~/.config/tmux/tmux.conf"
+alias update_tmux="tmux source ~/.tmux.conf"
 
 # Alias for extract
 alias x="extract"

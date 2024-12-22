@@ -1,12 +1,17 @@
 local wezterm = require('wezterm')
---# 绑定一个新的快捷键来删除pane，先进行确认
---unbind x
---bind -n C-x confirm -p "Are you sure you want to kill this pane? (y/n)" "if -F '#{?pane_in_mode,1,0}' 'send -X cancel' 'if -F '#{==:#{pane_current_command},bash}' 'send -X confirm' 'if -F '#{==:#{pane_current_command},zsh}' 'send -X confirm' 'if -F '#{==:#{pane_current_command},fish}' 'send -X confirm' 'send -X kill-pane'"
 return {
     keys = {
         {
+            key = '/',
+            mods = "CMD",
+            action = wezterm.action.Multiple({
+                wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
+                wezterm.action.SendKey({ key = ':' }),
+            })
+        },
+        {
             key = 't',
-            mods = "CTRL",
+            mods = "CMD",
             action = wezterm.action.Multiple({
                 wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
                 wezterm.action.SendKey({ key = 'c' }),
@@ -14,10 +19,18 @@ return {
         },
         {
             key = 'w',
-            mods = "CTRL",
+            mods = "CMD",
             action = wezterm.action.Multiple({
                 wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
                 wezterm.action.SendKey({ key = 'x' }),
+            })
+        },
+        {
+            key = 'r',
+            mods = "CMD",
+            action = wezterm.action.Multiple({
+                wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
+                wezterm.action.SendKey({ key = ',' }),
             })
         },
         {
@@ -37,8 +50,40 @@ return {
             })
         },
         {
+            key = 'h',
+            mods = "CMD",
+            action = wezterm.action.Multiple({
+                wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
+                wezterm.action.SendKey({ key = 'h' }),
+            })
+        },
+        {
+            key = 'j',
+            mods = "CMD",
+            action = wezterm.action.Multiple({
+                wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
+                wezterm.action.SendKey({ key = 'j' }),
+            })
+        },
+        {
+            key = 'k',
+            mods = "CMD",
+            action = wezterm.action.Multiple({
+                wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
+                wezterm.action.SendKey({ key = 'k' }),
+            })
+        },
+        {
+            key = 'l',
+            mods = "CMD",
+            action = wezterm.action.Multiple({
+                wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
+                wezterm.action.SendKey({ key = 'l' }),
+            })
+        },
+        {
             key = 'z',
-            mods = "CTRL",
+            mods = "CMD",
             action = wezterm.action.Multiple({
                 wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
                 wezterm.action.SendKey({ key = 'z' }),
@@ -46,7 +91,7 @@ return {
         },
         {
             key = '1',
-            mods = "CTRL",
+            mods = "CMD",
             action = wezterm.action.Multiple({
                 wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
                 wezterm.action.SendKey({ key = '1' }),
@@ -54,7 +99,7 @@ return {
         },
         {
             key = '2',
-            mods = "CTRL",
+            mods = "CMD",
             action = wezterm.action.Multiple({
                 wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
                 wezterm.action.SendKey({ key = '2' }),
@@ -62,7 +107,7 @@ return {
         },
         {
             key = '3',
-            mods = "CTRL",
+            mods = "CMD",
             action = wezterm.action.Multiple({
                 wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
                 wezterm.action.SendKey({ key = '3' }),
@@ -70,7 +115,7 @@ return {
         },
         {
             key = '4',
-            mods = "CTRL",
+            mods = "CMD",
             action = wezterm.action.Multiple({
                 wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
                 wezterm.action.SendKey({ key = '4' }),
@@ -78,10 +123,42 @@ return {
         },
         {
             key = '5',
-            mods = "CTRL",
+            mods = "CMD",
             action = wezterm.action.Multiple({
                 wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
                 wezterm.action.SendKey({ key = '5' }),
+            })
+        },
+        {
+            key = '6',
+            mods = "CMD",
+            action = wezterm.action.Multiple({
+                wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
+                wezterm.action.SendKey({ key = '6' }),
+            })
+        },
+        {
+            key = '7',
+            mods = "CMD",
+            action = wezterm.action.Multiple({
+                wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
+                wezterm.action.SendKey({ key = '7' }),
+            })
+        },
+        {
+            key = '8',
+            mods = "CMD",
+            action = wezterm.action.Multiple({
+                wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
+                wezterm.action.SendKey({ key = '8' }),
+            })
+        },
+        {
+            key = '9',
+            mods = "CMD",
+            action = wezterm.action.Multiple({
+                wezterm.action.SendKey({ key = ' ', mods = 'CTRL' }),
+                wezterm.action.SendKey({ key = '9' }),
             })
         }
     }
