@@ -1,4 +1,4 @@
-local wezterm = require('wezterm')
+local wz = require('wezterm')
 
 return {
 }

@@ -1,6 +1,3 @@
-local wezterm = require "wezterm"
-
-
 return {
     -- everforest 主题配色
     -- color_scheme_dirs = {wezterm.config_dir .. 'colors'},
