@@ -1,11 +1,14 @@
-return {
-    -- everforest 主题配色
-    -- color_scheme_dirs = {wezterm.config_dir .. 'colors'},
-    -- color_scheme = "everforest-dark-medium",
-    -- Catppuccin 主题配色
-    -- color_scheme = "Catppuccin Mocha", -- or Macchiato, Frappe, Latte
-    color_scheme = "Catppuccin Frappe"
-    -- color_scheme = "Gruvbox dark, medium (base16)"
-    -- color_scheme = 'OneDark (base16)'
-}
+local wezterm = require('wezterm')
 
+local appearance = wezterm.gui.get_appearance()
+local color_scheme
+color_scheme = "Catppuccin Mocha"
+-- color_scheme = "everforest-dark-medium"
+-- if appearance:find "Dark" then
+--     color_scheme = "Catppuccin Frappe"
+-- else
+--     color_scheme = "Catppuccin Latte"
+-- end
+
+
+return { color_scheme = color_scheme }

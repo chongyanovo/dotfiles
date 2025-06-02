@@ -34,79 +34,79 @@
     },
     {
       "type": "os",
-      "key": "│           │\u001b[11D{#31}  \u001b[{#37}OS",
+      "key": "│           │\u001b[11D{#31}  OS",
       "format": "{2} {10} {12}",
       "outputColor": "31;1"
     },
     {
       "type": "host",
-      "key": "│           │\u001b[11D{#32}󰇅  \u001b[{#37}Host",
+      "key": "│           │\u001b[11D{#32}󰇅  Host",
       "format": "{2} {3}",
       "outputColor": "32;1"
     },
     {
       "type": "os",
-      "key": "│           │\u001b[11D{#34}  \u001b[{#37}Kernel",
+      "key": "│           │\u001b[11D{#34}  Kernel",
       "outputColor": "34;1"
     },
     {
       "type": "uptime",
-      "key": "│           │\u001b[11D{#35}󰅐  \u001b[{#37}Uptime",
+      "key": "│           │\u001b[11D{#35}󰅐  Uptime",
       "format": "{1} days {2} hours {3} mins",
       "outputColor": "35;1"
     },
     {
       "type": "cpu",
-      "key": "│           │\u001b[11D{#36}  \u001b[{#37}CPU",
+      "key": "│           │\u001b[11D{#36}  CPU",
       "format": "{1} ({5})@{7} GHz ({8})",
       "temp": true,
       "outputColor": "36;1"
     },
     {
       "type": "gpu",
-      "key": "│           │\u001b[11D{#31}  \u001b[{#37}GPU",
+      "key": "│           │\u001b[11D{#31}  GPU",
       "format": "{2} ({5}) ({4})",
       "temp": true,
       "outputColor": "31;1"
     },
     {
       "type": "memory",
-      "key": "│           │\u001b[11D{#32}  \u001b[{#37}Memory",
+      "key": "│           │\u001b[11D{#32}  Memory",
       "format": "{1} / {2} ({3})",
       "outputColor": "32;1"
     },
     {
       "type": "disk",
-      "key": "│           │\u001b[11D{#33}  \u001b[{#37}Disk",
+      "key": "│           │\u001b[11D{#33}  Disk",
       "format": "{1} / {2} ({3})",
       "outputColor": "34;1"
     },
     {
-      "key": "│           │\u001b[11D{#34}󰏗  \u001b[{#37}Pkgs",
+      "key": "│           │\u001b[11D{#34}󰏗  Pkgs",
       "type": "packages",
       "outputColor": "34;1"
     },
     {
       "type": "battery",
-      "key": "│           │\u001b[11D{#35}  \u001b[{#37}Battery",
+      "key": "│           │\u001b[11D{#35}  Battery",
       "format": "当前电量: {4} 循环次数: {7}",
       "outputColor": "35;1"
     },
     {
       "type": "wifi",
-      "key": "│           │\u001b[11D{#36}  \u001b[{#37}WiFi",
+      "key": "│           │\u001b[11D{#36}  WiFi",
       "format": "{4}",
       "outputColor": "36;1"
     },
     {
       "type": "shell",
-      "key": "│           │\u001b[11D{#31}  \u001b[{#37}Shell",
+      "key": "│           │\u001b[11D{#31}  Shell",
       "format": "{3}",
       "outputColor": "31;1"
     },
     {
       "type": "terminalfont",
-      "key": "│           │\u001b[11D{#32}  \u001b[{#37}Font",
+      "key": "│           │\u001b[11D{#32}  Font",
       "format": "{1}",
       "outputColor": "32;1"
     },

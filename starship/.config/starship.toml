@@ -1,0 +1,20 @@
+add_newline = true
+
+[character]
+success_symbol = '[➜](bold green)' 
+
+[package]
+disabled = false
+
+[golang]
+symbol = '󰟓 '
+format = '[󰟓  $version](bold blue) '
+
+[python]
+symbol = '󰌠 '
+pyenv_version_name = false
+
+
+[java]
+symbol = '󰬷 '
+format = '[󰬷 $version](bold red) '
